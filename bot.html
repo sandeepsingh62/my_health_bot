@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>AYUSH Health Bot Web Chat</title>
+    <style>
+        #webchat {
+            height: 500px;
+            width: 100%;
+        }
+        body {
+            background-image: url('C:\Users\user\OneDrive\Desktop\PROJECT AYUSH\web\images\ayush_background..jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+</head>
+<body>
+    <div id="webchat" role="main"></div>
+    <script>
+        const webChatSecret = "LzMRedJxYc4.wQvAa3d_42x23U-k75dYLeRP20lVeFrV8PvTKI-19EE";
+        window.WebChat.renderWebChat(
+            {
+                directLine: window.WebChat.createDirectLine({ token: webChatSecret }),
+                userID: 'YOUR_USER_ID',
+                username: 'YOUR_USERNAME',
+                locale: 'en-US',
+                styleOptions: {
+                    bubbleBackground: '#F4F4F4',
+                    bubbleFromUserBackground: '#F4F4F4'
+                }
+            },
+            document.getElementById('webchat')
+        );
+    </script>
+</body>
+</html>
